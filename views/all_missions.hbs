@@ -1,0 +1,14 @@
+<div class="page-container">
+  <div class="card-container">
+    {{#each data}}
+    <a href="/mission/{{this.mission_id}}">
+      <div class="list-card">
+        <p class="list-card__text">{{ this.mission_id }} <br /> 
+        {{this.mission_name}}</p>
+      </div>
+    </a>
+    {{/each}}
+  </div>
+
+</div>
+

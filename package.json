@@ -1,0 +1,39 @@
+{
+  "name": "spacex-api-playground",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "lint": "eslint '**/*.js' || exit 0",
+    "pretest": "npm run lint",
+    "test": "mocha --report dot --exit '**/*.spec.js' --exclude 'node_modules/**/*.js'",
+    "prestart": "npm run test",
+    "start": "node server.js",
+    "restart": "nodemon --exec 'npm run start'"
+  },
+  "keywords": [],
+  "author": "Micke",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saltsthlm/salt-winter19-hackdayW09.git"
+  },
+  "bugs": {
+    "url": "https://github.com/saltsthlm/salt-winter19-hackdayW09/issues"
+  },
+  "homepage": "https://github.com/saltsthlm/salt-winter19-hackdayW09#readme",
+  "devDependencies": {
+    "body-parser": "^1.18.3",
+    "eslint": "^5.15.1",
+    "eslint-plugin-mocha": "^5.2.1",
+    "mocha": "^6.0.2",
+    "nodemon": "^1.18.10",
+    "prettier-eslint": "^8.8.2"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2",
+    "handlebars": "^4.1.0",
+    "node-fetch": "^2.3.0"
+  },
+  "description": ""
+}

@@ -1,0 +1,61 @@
+<div class="detail-page-container">
+  <section class="launch-details">
+    <h1 class="detail-page-container__title">{{data.mission_name}}</h1>
+
+  {{#if data.links.mission_patch_small}}
+    <div class="detail-page-container__patch">
+      <img src="{{data.links.mission_patch_small}}" alt="mission_patch">
+    </div>
+  {{/if}}
+  
+    <div class="detail-page-container__box detail-page-container__link-box">
+      {{#if data.links.video_link}} <a href="{{data.links.video_link}}" target="_blank">Video</a> {{/if}}
+      {{#if data.links.article_link}} <a href="{{data.links.article_link}}" target="_blank">Article</a> {{/if}}
+      {{#if data.links.wikipedia}} <a href="{{data.links.wikipedia}}" target="_blank">Wikipedia</a> {{/if}}
+    </div>
+
+
+    <div class="detail-page-container__box">
+      <p><span class="bold">Flight number:</span> {{data.flight_number}}</p>
+      <p><span class="bold">Launch date:</span> {{#splitDate}}{{data.launch_date_utc}}{{/splitDate}} UTC</p>
+    </div>
+
+    <div class="detail-page-container__box">
+      <p><span class="bold">Rocket name:</span> <a href="/rocket/{{data.rocket.rocket_id}}">{{data.rocket.rocket_name}}</a></p>
+      <p><span class="bold">Rocket type:</span> {{data.rocket.rocket_type}}</p>
+    </div>
+
+    <div class="detail-page-container__box">
+      <p><span class="bold">Payload:</span>
+        {{#each data.rocket.second_stage.payloads}}
+        <p><span class="bold">Payload ID:</span> {{this.payload_id}}<br />
+        <span class="bold">Payload type:</span> {{this.payload_type}}<br />
+        <span class="bold">Payload mass:</span> {{this.payload_mass_kg}} kg</p>
+        {{/each}}
+      </p>
+    </div>
+
+    <div class="detail-page-container__box">
+      <p><span class="bold">Launch site:</span> {{data.launch_site.site_name_long}}</p>
+      {{#if data.launch_success}}
+      <p><span class="bold">Successful launch:</span> {{data.launch_success}}</p>
+      {{/if}}
+      {{#if data.launch_failure_details.reason}}     
+        <p><span class="bold">Fail reason:</span> {{data.launch_failure_details.reason}}</p>
+      {{/if}}
+    </div>
+
+    <div class="detail-page-container__box">
+      <p class="launch-details__details">{{data.details}}</p>
+    </div>
+
+    <div class="detail-page-container__image-box">
+        {{#each data.links.flickr_images}}
+        <a href="{{this}}" class="thumbnail-wrapper">
+          <img src="{{this}}" alt="image" class="thumbnail">
+        </a>
+      {{/each}}
+      </div>
+
+  </section>
+</div>

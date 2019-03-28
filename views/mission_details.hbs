@@ -1,0 +1,39 @@
+<div class="detail-page-container">
+  <section class="mission-details">
+
+    <h1 class="detail-page-container__title">Mission {{data.mission_id}}</h1>
+    <p class="mission-container__mission-name">Mission name: {{data.mission_name}}</p>
+
+    <div class="detail-page-container__box">
+      <p>Payload:</p>
+      <ul class="mission-container__payload-list">
+        {{#each data.payload_ids}}
+        <li>{{this}}</li>
+        {{/each}}
+      </ul>
+    </div>
+
+    <div class="detail-page-container__box">
+      <p>Description:</p>
+      <p>{{data.description}}</p>
+    </div>
+
+    <div class="detail-page-container__box">
+      <p>
+        Manufacturers:
+        {{#each data.manufacturers}}
+        {{this}}
+        {{/each}}
+      </p>
+    </div>
+
+    <div class="detail-page-container__box detail-page-container__link-box">
+      <a href="{{data.website}}" class="detail-page-container__links" target="_blank">Website</a>
+      <a href="{{data.wikipedia}}" target="_blank">Wikipedia</a>
+      {{#if data.twitter}}
+      <a href="{{data.twitter}}" target="_blank">Twitter</a>
+      {{/if}}
+    </div>
+
+  </section>
+</div>

@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+a, a:hover, a:visited, a:active {
+  text-decoration: none;
+  color: #fefefe;
+}
+
+body {
+  background-color: #222;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.main-container {
+  margin: auto;
+  min-width: 260px;
+}
+
+@media screen and (min-width: 800px) {
+  .content-container {
+    max-width: 900px;
+    margin: auto;
+  }
+}

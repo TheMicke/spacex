@@ -1,0 +1,77 @@
+.main-container {
+  margin: auto;
+}
+
+.header {
+  width: 100%;
+  margin-bottom: 5px;
+  background-color: #222;
+}
+
+.header__logo {
+  margin: auto;
+  display: block;
+  width: 100%;
+  max-width: 556px;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 50px;
+  width: 100%;
+  background-color: #00528d;
+}
+
+.navbar__button {
+  height: 75%;
+  width: 17%;
+  background-color: #0071c2;
+  border-radius: 10px;
+  text-align: center;
+  align-self: center;
+}
+
+.navbar__button__text {
+  display: none;
+  color: #efefef;
+  margin-top: 10px;
+}
+
+.navbar__button__icon {
+  margin: auto;
+  padding-top: 5px;
+  max-height: 28px;
+  max-width: 28px;
+  color: #efefef;
+  display: block;
+
+}
+
+@media screen and (min-width: 800px) {
+.header {
+  margin-bottom: 0;
+}
+
+.navbar__button {
+  height: 75%;
+  margin: 0 auto;
+}
+
+.navbar__button__icon {
+  display: inline-block;
+  vertical-align: middle;
+  padding-bottom: 15px;
+}
+
+.navbar__button__text {
+  display: inline-block;
+  color: #efefef;
+  margin-top: 10px;
+  margin-left: 10px;
+  vertical-align: middle;
+
+}
+
+}

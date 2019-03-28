@@ -1,0 +1,36 @@
+<div class="detail-page-container">
+  <section class="rocket-details">
+
+    <div class="flexColumn">
+      <h1 class="detail-page-container__title">{{data.rocket_name}}</h1>
+      <div class="detail-page-container__box">
+        <p><span class="bold">First flight:</span > {{data.first_flight}}</p>
+        <p><span class="bold">Height:</span > {{data.height.meters}} meters</p>
+        <p><span class="bold">Diameter:</span > {{data.diameter.meters}} meters</p>
+        <p><span class="bold">Weight:</span > {{data.mass.kg}} kg</p>
+      </div>
+      <div class="detail-page-container__box">
+        <p><span class="bold">Rocket ID:</span > {{data.id}}</p>
+        <p><span class="bold">Success rate:</span > {{data.success_rate_pct}}%</p>
+        <p><span class="bold">In active use:</span > {{data.active}}</p>
+        <p><span class="bold">Stages:</span > {{data.stages}}</p>
+        <p><span class="bold">Boosters:</span > {{data.boosters}}</p>
+        <p><span class="bold">Cost per launch:</span > ${{data.cost_per_launch}}</p>
+        <p><span class="bold">Country:</span > {{data.country}}</p>
+      </div>
+    </div>
+
+    <div class="flexColumn">
+      <div class="detail-page-container__image-box">
+        <div class="flexColumn">
+          {{#each data.flickr_images}}
+          <a href="{{this}}" class="thumbnail-link">
+            <img src="{{this}}" alt="image" class="thumbnail">
+          </a>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+
+  </section>
+</div>
